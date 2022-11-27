@@ -82,7 +82,7 @@ export default function UploadButtons({ onChangeFile, value, error }) {
       console.log(error);
     }
   }
-  // console.log(value);
+  // console.log("VALUE:", value);
   let content;
   //EDIT
   if (value.uri && value.uri?.split("/").pop() === "download") {
@@ -149,7 +149,7 @@ export default function UploadButtons({ onChangeFile, value, error }) {
       />
     );
   }
-  if (value.uri?.trim().length === 0) {
+  if (value.uri?.trim().length === 0 || value.uri === undefined) {
     // console.log("ELSE");
 
     content = (
